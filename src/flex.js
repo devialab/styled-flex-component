@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import is from 'styled-is';
+import tag from 'tag-hoc';
 
-export default styled.div`
+const Flex = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -135,3 +136,6 @@ export default styled.div`
     justify-content: center;
   `};
 `;
+
+const propsToRemove = ['wrap'];
+export default tag(propsToRemove)(Flex);
